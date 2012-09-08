@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+	<title>Jumpy Jumpy</title>
+</head>
+<style type="text/css">
+#imagen{display:block; margin-top: 500px; width: 100px;height:100px;position:relative;}
+article {width: 100%;background-image:;}
+html,body{background-image: url(fondo.png)}
+h1{text-align:center;color:orangered;font-size:50px;}
+h1:hover{text-align:center;color:orangered;font-size:50px;text-shadow: 0px 0px 5px yellow;}
+#boton{color:orangered;font-size:25px;border-radius: 5px;background:black;}
+#boton:hover{box-shadow:0px 0px 25px red;}
+</style
+<body>
+	
+
+
+	<article>
+		<h1>Jumpy Jumpy</h1>
+
+		<button id="boton">Mover</button>
+		<script>
+var boton = document.getElementById('boton');
+
+var num = 50;
+
+var domina = 1;
+
+var limit = 300;
+
+var limitinf = 50;
+
+var parar =0;
+
+boton.addEventListener('click',animar);
+function sube(aument){
+
+	var imagen= document.getElementById('imagen');
+
+	var strnum = aument.toString();
+
+
+	imagen.style.bottom= strnum + 'px';
+
+	num = num + 50;
+
+	if(num>limit){
+		domina++;
+		parar++;
+		
+		}
+	
+
+}
+
+function baja(aument){
+
+	var imagen= document.getElementById('imagen');
+
+	var strnum = aument.toString();
+
+
+	imagen.style.bottom= strnum + 'px';
+
+	num = num - 50;
+
+	if(num<limitinf){
+		domina--;
+		parar++;
+		limit= limit - 100;
+		}
+
+}
+
+function decide(aument){
+	
+	
+	if(parar>20){
+		
+		domina=3;
+		
+		}
+		
+		
+		else{
+switch(domina){
+case 1 : sube(num); break;
+case 2 : baja(num); break;
+case 3 : return;break;
+}
+	
+	}
+
+
+}
+
+
+
+
+function animar(){
+		
+		setInterval('decide(num)',50);
+	
+	
+	
+	
+}
+
+
+</script>
+		<figure >
+			<img  src="balon.png" id="imagen"/>
+
+		</figure>
+	</article>
+	
+
+
+</body>
+</html>

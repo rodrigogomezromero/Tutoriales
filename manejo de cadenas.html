@@ -1,0 +1,33 @@
+<!doctype html>
+<html leng="es">
+<head>
+	<meta charset="utf-8">
+	<title>Manejo de cadenas</title>
+	
+</head>
+<body>
+	
+<input  type="text" id="caja"  value="Escriba etiquetas" >
+<input id="btn"type="button"  value="Agregar etiquetas">
+<script type="text/javascript">
+
+	boton = document.getElementById('btn');
+	boton.addEventListener('click',boton_click);
+	function boton_click (){
+		var  caja = document.getElementById('caja').value;
+		
+		separar(caja);
+	}	
+
+	function separar(texto){
+	 var Etiquetas = texto.split(',');
+	 		for (var i = 0; i < Etiquetas.length; i++) {
+	 			document.write('Etiqueta '+i+": "+ Etiquetas[i]+"<br>");
+	 	
+	 		};//fin del for
+	 	}
+
+	</script>
+</div>
+</body>
+</html>
