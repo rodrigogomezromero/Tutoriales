@@ -5,16 +5,16 @@ OUT=sys.argv[1]; AUDIO=sys.argv[2]
 B="/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf"
 X=0.4  # crossfade
 # (imagen, inicio, fin, texto, zoom_in)
-segs=[("96a0989f",0.0,2.3,"¿Ya conoces\nEl Sabor de Emmy?",1),
-      ("01af0614",2.3,4.2,"Antojitos regionales\nen Chetumal",0),
-      ("6a24ef53",4.2,6.2,"",1),
-      ("af9c2ebb",6.2,7.7,"Para compartir",0),
-      ("a23bdf6e",7.7,9.2,"Sabores tradicionales",1),
-      ("59d00b38",9.2,11.0,"Bebidas refrescantes",0),
-      ("f8060348",11.0,13.0,"Descubre su\nmenú digital",1),
-      ("ae7a02fd",13.0,14.6,"",0),
-      ("68656bfa",14.6,16.8,"Elige tu\npróximo antojo",1),
-      ("9bd3bd5c",16.8,21.5,"",1)]
+segs=[("96a0989f",0.0,2.7,"¿Ya conoces\nEl Sabor de Emmy?",1),
+      ("01af0614",2.7,5.2,"Antojitos regionales\nen Chetumal",0),
+      ("6a24ef53",5.2,8.1,"",1),
+      ("af9c2ebb",8.1,9.6,"Para compartir",0),
+      ("a23bdf6e",9.6,11.1,"Sabores tradicionales",1),
+      ("59d00b38",11.1,12.6,"Bebidas refrescantes",0),
+      ("ae7a02fd",12.6,13.9,"",1),
+      ("f8060348",13.9,15.7,"Descubre su\nmenú digital",0),
+      ("68656bfa",15.7,17.2,"Elige tu\npróximo antojo",1),
+      ("9bd3bd5c",17.2,23.0,"",1)]
 FPS=30
 clips=[]
 for i,(img,a,b,txt,zin) in enumerate(segs):
